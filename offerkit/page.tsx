@@ -1109,7 +1109,7 @@ export default function OfferKitLandingPage() {
           </div>
 
           <div className="text-xs text-slate-500">
-            جميع الحقوق محفوظة &copy; {new Date().getFullYear()} OfferKit. صُمم لدعم التجارة الإلكترونية.
+            جميع الحقوق محفوظة &copy; 2026 OfferKit. صُمم لدعم التجارة الإلكترونية.
           </div>
         </div>
       </footer>
