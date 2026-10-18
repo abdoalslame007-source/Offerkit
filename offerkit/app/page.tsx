@@ -20,7 +20,7 @@ import {
   Smartphone,
   Layers,
 } from "lucide-react";
-
+import { supabase } from '@/lib/supabase';
 // Types
 interface CampaignResult {
   id: string;
