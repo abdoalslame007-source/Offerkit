@@ -151,7 +151,23 @@ export default function OfferKitLandingPage() {
   const handleGenerate = (e: React.FormEvent) => {
     e.preventDefault();
     if (!validateForm()) return;
+const handleGenerate = (e: React.FormEvent) => {
+      e.preventDefault();
+          if (!validateForm()) return;
 
+              // إرسال البيانات سراً إلى قاعدة البيانات
+                  supabase.from('campaign_requests').insert([
+                        {
+                                product_name: productName.trim(),
+                                        product_price: price.trim(),
+                                                offer_details: offerDetails.trim(),
+                                                        client_contact: whatsappNumber.trim()
+                                                              }
+                                                                  ]).then(() => console.log('تم الإرسال لقاعدة البيانات'));
+
+                                                                      setIsGenerating(true);
+                                                                          setGenerationStep(1);
+}
     setIsGenerating(true);
     setGenerationStep(1);
 
